@@ -1,5 +1,20 @@
 plugins {
     id 'java-library'
+    id 'io.qameta.allure' version '2.10.0'
+}
+
+allure {
+    report {
+        version.set("2.30.0") //версия Allure Report (https://github.com/allure-framework/allure2)
+    }
+    adapter {
+        aspectjWeaver.set(true) // обработка аннотации @Step
+        frameworks {
+            junit5 {
+                adapterVersion.set("2.28.0") //версия Allure JUnit5 (https://github.com/allure-framework/allure-java)
+            }
+        }
+    }
 }
 
 repositories {
@@ -8,14 +23,22 @@ repositories {
 
 dependencies {
     testImplementation (
-            "com.codeborne:selenide:6.19.1",
-            "org.junit.jupiter:junit-jupiter:5.9.3")
+            'com.codeborne:selenide:7.3.1',
+            'org.junit.jupiter:junit-jupiter:5.10.3',
+            'io.qameta.allure:allure-selenide:2.28.0',
+            'org.slf4j:slf4j-simple:2.0.13'
+    )
 }
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
 test {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat "full"
+    }
     useJUnitPlatform()
 }
+
