@@ -44,13 +44,13 @@ public class RegistrationRemoteTests {
         Configuration.browserCapabilities = capabilities;
     }
 
-//    @AfterEach
-//    void addAttachments() {
-//        Attach.screenshotAs("Last screenshot");
-//        Attach.pageSource();
-//        Attach.browserConsoleLogs();
-//        Attach.addVideo();
-//    }
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+    }
 
     @Test
     void successfulRegistrationTest () {
