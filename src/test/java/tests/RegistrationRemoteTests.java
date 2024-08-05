@@ -32,7 +32,7 @@ public class RegistrationRemoteTests {
 
 
         Configuration.pageLoadStrategy = "eager";
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
+       // System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
