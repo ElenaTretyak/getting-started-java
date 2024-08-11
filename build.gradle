@@ -28,7 +28,7 @@ allure {
 
 dependencies {
     testImplementation (
-            'com.codeborne:selenide:7.4.0',
+            'com.codeborne:selenide:7.4.1',
             'org.junit.jupiter:junit-jupiter:5.10.3',
             "io.qameta.allure:allure-selenide:$allureVersion",
             'org.slf4j:slf4j-simple:2.0.13'
