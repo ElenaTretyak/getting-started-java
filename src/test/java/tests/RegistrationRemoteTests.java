@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import helpers.Attach;
@@ -8,6 +9,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
@@ -28,13 +30,12 @@ public class RegistrationRemoteTests {
         // Configuration.browser = "chrome";
         Configuration.timeout = 10000;
         //Configuration.holdBrowserOpen = true;
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
-
-        Configuration.pageLoadStrategy = "eager";
-       // System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
+        Configuration.pageLoadStrategy = "eager"; //???
+       // System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -56,7 +57,7 @@ public class RegistrationRemoteTests {
     void successfulRegistrationTest () {
         step("Open form", () -> {
 
-            open("/automation-practice-form");
+            open("https://demoqa.com/automation-practice-form");
             $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
             executeJavaScript("$('#fixedban').remove()");
             executeJavaScript("$('footer').remove()");
