@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class SearchTests {
     @Test
     void successfulSearchTest() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
         open("https://www.google.com/");
         $(byName("q")).setValue("selenide").pressEnter();
        // $("[name=q]").setValue("selenide").pressEnter();

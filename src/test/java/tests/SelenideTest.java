@@ -13,7 +13,7 @@ import static org.openqa.selenium.By.linkText;
 public class SelenideTest {
     @Test
     public void testIssueSearch() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         open("https://github.com");

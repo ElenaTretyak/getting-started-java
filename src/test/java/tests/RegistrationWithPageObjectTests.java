@@ -18,7 +18,7 @@ public class RegistrationWithPageObjectTests extends TestBase {
         SelenideLogger.addListener("allure", new AllureSelenide());
         String userName = "Ivan";
 
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
         registrationPage.openPage()
                         .setFirstName("Ivan")
                         .setLastName("Petrov")

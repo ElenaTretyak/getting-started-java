@@ -18,7 +18,7 @@ public class SelenideStepsTest {
     private static final int ISSUE = 80;
     @Test
     public void testLambdaStep() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         step ("Открываем главную страницу", () -> {
