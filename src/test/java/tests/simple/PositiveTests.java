@@ -3,6 +3,8 @@ package tests.simple;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Selenide.open;
+import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tag("simple")
@@ -57,4 +59,10 @@ public class PositiveTests {
     void someTest9() {
         assertTrue(true);
     }
+
+    @Test
+    void openQAform () {
+        open("https://demoqa.com/automation-practice-form");
+    }
+
 }
