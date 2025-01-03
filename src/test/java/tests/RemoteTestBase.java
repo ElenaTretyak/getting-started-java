@@ -22,7 +22,7 @@ public class RemoteTestBase {
         Configuration.browserVersion = System.getProperty("version","131");
 
         Configuration.pageLoadStrategy = "eager";
-        Configuration.remote = "https://user1:1234@"+System.getProperty("selenoid","selenoid.autotests.cloud")+"/wd/hub";
+       // Configuration.remote = "https://user1:1234@"+System.getProperty("selenoid","selenoid.autotests.cloud")+"/wd/hub";
         //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         //System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
