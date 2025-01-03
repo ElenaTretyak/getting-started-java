@@ -28,8 +28,8 @@ allure {
 
 dependencies {
     testImplementation (
-            'com.codeborne:selenide:7.4.1',
-            'org.junit.jupiter:junit-jupiter:5.10.3',
+            'com.codeborne:selenide:7.6.1',
+            'org.junit.jupiter:junit-jupiter:5.11.4',
             "io.qameta.allure:allure-selenide:$allureVersion",
             'org.slf4j:slf4j-simple:2.0.13'
     )
@@ -61,5 +61,11 @@ task simple_test(type: Test) {
 task demoqa_test(type: Test) {
     useJUnitPlatform {
         includeTags("demoqa")
+    }
+}
+
+task remote_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("remote")
     }
 }

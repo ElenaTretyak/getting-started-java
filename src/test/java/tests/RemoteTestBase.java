@@ -6,6 +6,7 @@ import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
@@ -13,11 +14,11 @@ import java.util.Map;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class RemoteTestBase {
+
     @BeforeAll
     static void beforeAll() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browser = System.getProperty("browser", "chrome");
+      //  Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.browserVersion = System.getProperty("version","131");
 
@@ -35,6 +36,11 @@ public class RemoteTestBase {
         Configuration.browserCapabilities = capabilities;
     }
 
+    @BeforeEach
+    void addListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
+
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
@@ -44,5 +50,4 @@ public class RemoteTestBase {
 
         closeWebDriver();
     }
-
 }

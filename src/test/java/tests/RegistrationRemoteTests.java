@@ -1,4 +1,5 @@
 package tests;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -8,10 +9,11 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-@Tag("demoqa")
 public class RegistrationRemoteTests extends RemoteTestBase{
 
     @Test
+    @Tag("remote")
+    @DisplayName("Successful registration")
     void successfulRegistrationTest () {
         step("Open form", () -> {
 
