@@ -1,0 +1,7 @@
+7140373286:AAHNt_u7hGtLF9YcDhDy4IZLZrjBjWpzbhU
+
+https://api.telegram.org/bot7140373286:AAHNt_u7hGtLF9YcDhDy4IZLZrjBjWpzbhU/getUpdates
+
+942317776
+
+curl -X POST-H 'Content-Type: application/json' -d '{"chat_id": "942317776", "text": "This is a test from tretyak_qa_bot", "disable_notification": true}'   https://api.telegram.org/bot7140373286:AAHNt_u7hGtLF9YcDhDy4IZLZrjBjWpzbhU/sendMessage

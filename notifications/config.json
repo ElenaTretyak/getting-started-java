@@ -1,0 +1,17 @@
+{
+  "base": {
+    "project": "some project",
+    "environment": "some env",
+    "comment": "some comment @Tretiak_Elena",
+    "reportLink": "https://jenkins.autotests.cloud/job/C22-Elena_Tretyak_SimpleTests_Notifications",
+    "language": "en",
+    "messenger": "telegram",
+    "allureFolder": "build/allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "7140373286:AAHNt_u7hGtLF9YcDhDy4IZLZrjBjWpzbhU",
+    "chat": "942317776",
+    "replyTo": ""
+  }
+}
