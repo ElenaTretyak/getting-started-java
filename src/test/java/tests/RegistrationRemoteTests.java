@@ -11,36 +11,6 @@ import static io.qameta.allure.Allure.step;
 @Tag("demoqa")
 public class RegistrationRemoteTests extends RemoteTestBase {
 
-//    @BeforeAll
-//    static void beforeAll() {
-//        Configuration.baseUrl = "https://demoqa.com";
-//        Configuration.browserSize = "1920x1080";
-//        // Configuration.browser = "chrome";
-//        Configuration.timeout = 10000;
-//        //Configuration.holdBrowserOpen = true;
-//        Configuration.remote = "https://user1:1234@"+System.getProperty("selenoid","selenoid.autotests.cloud")+"/wd/hub";
-//
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-//
-//        Configuration.pageLoadStrategy = "eager"; //???
-//       // System.setProperty("webdriver.chrome.driver","C:\\Users\\Лена\\.cache\\selenium\\chromedriver\\win64\\126.0.6478.126\\chromedriver.exe");
-//
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true
-//        ));
-//        Configuration.browserCapabilities = capabilities;
-//    }
-
-//    @AfterEach
-//    void addAttachments() {
-//        Attach.screenshotAs("Last screenshot");
-//        Attach.pageSource();
-//        Attach.browserConsoleLogs();
-//        Attach.addVideo();
-//    }
-
     @Test
     void successfulRegistrationTest () {
         step("Open form", () -> {
