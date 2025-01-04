@@ -30,7 +30,7 @@ public class RegistrationRemoteTests {
         // Configuration.browser = "chrome";
         Configuration.timeout = 10000;
         //Configuration.holdBrowserOpen = true;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = "https://user1:1234@"+System.getProperty("selenoid","selenoid.autotests.cloud")+"/wd/hub";
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
